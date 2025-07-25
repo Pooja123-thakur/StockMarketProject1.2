@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Dashboard - TradingView Style</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="header-container">
+        <div class="search-section">
+            <input type="text" id="ticker-input" placeholder="Enter Stock Ticker (e.g., AAPL)">
+            <button onclick="loadStockData()">Search</button>
+            
+        </div>
+        <!-- bookmark section -->
+        <div class="bookmarks-dropdown">
+            <button class="bookmarks-toggle" onclick="toggleBookmarksList()">
+                <i class="fas fa-bookmark"></i> Bookmarks
+            </button>
+            <div class="bookmarks-list" id="bookmarks-list">
+                <!-- Bookmarks will be loaded here -->
+                <div class="no-bookmarks">No bookmarks yet</div>
+            </div>
+        </div>
+    </div>
+
+<header>
+<div class="stock-title-container">
+    
+        <h1 id="stock-name">Stock Dashboard</h1>
+        <!-- bookmark button -->
+        <button id="bookmark-btn" onclick="toggleBookmark()">
+            <i class="far fa-bookmark"></i> Bookmark
+        </button>
+    </div>
+    <p id="recommendation"></p>
+</header>
+
+    <section class="main">
+        <div class="card">
+            <h2>Key Metrics</h2>
+            <p>Current Price: $<span id="current-price"></span></p>
+            <p>Change: <span id="change"></span> (<span id="change-percent"></span>%)</p>
+            <p>Volume: <span id="volume"></span></p>
+            <p>Buy Signal: <span id="buy-signal"></span></p>
+            <p>Confidence: <span id="confidence"></span></p>
+            <p>Risk Level: <span id="risk-level"></span></p>
+        </div>
+     
+      
+        <div class="card">
+            <h2>TradingView Chart</h2>
+            <div class="tv-widget-container">
+                <!-- Widget will load here -->
+                <div class="tradingview-widget-container">
+                    <div id="tradingview_chart"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Financial Data</h2>
+            <div id="financials">
+                <h3>Balance Sheet</h3>
+                <pre id="balance-sheet"></pre>
+                <h3>Cash Flow</h3>
+                <pre id="cash-flow"></pre>
+                <h3>Income Statement</h3>
+                <pre id="income-data"></pre>
+            </div>
+        </div>
+    </section>
+
+        <div class="card">
+            <h2>Quarterly Financials</h2>
+            <div id="growth-metrics">
+                <p>Revenue Growth (QoQ): <span id="revenue-growth"></span>%</p>
+                <p>Asset Growth (QoQ): <span id="asset-growth"></span>%</p>
+                <p>Growth Factor: <span id="growth-factor"></span>/10</p>
+            </div>
+            <table id="quarterly-table">
+                <thead>
+                    <tr>
+                        <th>Period</th>
+                        <th>Revenue</th>
+                        <th>Expenses</th>
+                        <th>Assets</th>
+                        <th>Liabilities</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+   
+
+    <script src="/static/script.js"></script>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+</body>
+</html>

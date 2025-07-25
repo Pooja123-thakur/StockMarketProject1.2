@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+#quarterly-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#quarterly-table th, #quarterly-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#quarterly-table th {
+    background-color: #f2f2f2;
+}
+
+#quarterly-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#growth-metrics {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+header {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1 {
+    margin: 0;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 2rem;
+}
+
+.card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+pre {
+    background-color: #f0f0f0;
+    padding: 10px;
+    overflow-x: auto;
+}
+.search-section {
+    text-align: center;
+    margin: 20px;
+}
+
+#ticker-input {
+    padding: 8px;
+    font-size: 16px;
+    width: 200px;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+/* Bookmark Styles */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+}
+
+#bookmark-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#bookmark-btn:hover {
+    background-color: #45a049;
+}
+
+.bookmarks-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.bookmarks-toggle {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.bookmarks-toggle:hover {
+    background-color: #0b7dda;
+}
+
+.bookmarks-list {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    max-height: 400px;
+    overflow-y: auto;
+    border-radius: 4px;
+}
+
+.bookmarks-list.show {
+    display: block;
+}
+
+.bookmark-item {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.bookmark-item:hover {
+    background-color: #f1f1f1;
+}
+
+.bookmark-item .delete-bookmark {
+    color: #ff5252;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 14px;
+}
+
+.bookmark-item .delete-bookmark:hover {
+    color: #ff0000;
+}
+
+.no-bookmarks {
+    padding: 15px;
+    color: #666;
+    text-align: center;
+}
+.stock-title-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#bookmark-btn {
+    background-color: transparent;
+    color: #2196F3;
+    border: 1px solid #2196F3;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.3s;
+    height: fit-content;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+#bookmark-btn:hover {
+    background-color: #e3f2fd;
+}
+
+#bookmark-btn i {
+    margin-right: 5px;
+}
+
+#stock-name {
+    margin: 0; /* Remove default h1 margins */
+    line-height: 1.2; /* Adjust line height if needed */
+}
